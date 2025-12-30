@@ -28,7 +28,7 @@ jobs:
                 try {
                     doesnotexits
                 } catch {
-                    Write-Output "An error occurred: $_"
+                    Write-Output "Pierre: An error occurred: $_"
                 }
 
 

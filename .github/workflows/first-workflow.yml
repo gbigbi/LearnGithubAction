@@ -3,7 +3,7 @@ on: [push]
 run-name: ${{ github.actor }} first workflow
 jobs:
     run-shell-commands:
-        runs-on: ubuntu:latest
+        runs-on: ubuntu-latest
         steps:
             - name: echo a string 
               run: echo "This is my first workflow"

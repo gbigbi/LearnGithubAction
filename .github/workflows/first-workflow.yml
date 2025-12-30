@@ -24,6 +24,11 @@ jobs:
             - name: echo string  on windows
               run: Write-Output "Windows String"
             - name: Error steps
-              run: doesnotexits
+              run: |
+                try {
+                    doesnotexits
+                } catch {
+                    Write-Output "An error occurred: $_"
+                }
 
 

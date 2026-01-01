@@ -22,8 +22,10 @@ jobs:
             - name: Set up NodeJs
               uses: actions/setup-node@v2
               with:
-                node-version: '24.12.0'
-            - name: Install NPM
+                node-version: '16'
+            - name: Update npm to latest version
+              run: npm install -g npm@latest
+            - name: Install NPM dependencies
               run: npm install
-            - name: Test npm 
+            - name: Run tests
               run: npm test

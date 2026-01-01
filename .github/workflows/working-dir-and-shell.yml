@@ -1,0 +1,27 @@
+name: working-dir-and-shell
+run-name: ${{github.actor}} 
+on: [push]
+
+jobs:
+    display-wd-linux-info:
+        runs-on: ubuntu-latest
+        steps:
+                - name: Display working Directory & List Files 
+                  run: |
+                    pwd
+                    ls -la
+                    echo $GITHUB_SHA
+                    echo $GITHUB_REPOSITORY
+                    echo $GITHUB_WORKSPACE
+    display-wd-windows-info:
+        runs-on: windows-latest
+        steps:
+                - name: Display working Directory & List Files 
+                  run: |
+                    pwd
+                    ls -la
+                    echo $GITHUB_SHA
+                    echo $GITHUB_REPOSITORY
+                    echo $GITHUB_WORKSPACE
+
+      

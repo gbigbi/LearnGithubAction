@@ -1,0 +1,22 @@
+name: Workflow commandes 
+run-name: ${{ github.actor }} run workflow commandes
+on: [push]
+
+jobs: 
+ testing-wf-commands:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Setting error message 
+      run: echo "::error::Missing semicolon"
+    - name: Setting error with params 
+      run: echo "::error title:Error title,file=app.js, line=2,endLine=3,col=5,endColumn=7::Missing semicolon"
+    - name: Group of logs 
+      run: |
+        echo "::group::My group title"
+        echo "Inside group"
+        echo "::endgroup::"
+    - name: Masking a value 
+      run: "::add-mask::Secret String"
+    - name: Echo secret 
+      run: echo "Secret String"
+    

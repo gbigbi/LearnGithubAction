@@ -22,8 +22,8 @@ jobs:
             - name: Set up NodeJs
               uses: actions/setup-node@v2
               with:
-                node-version: '18'
-            - name: Install
+                node-version: '24.12.0'
+            - name: Install NPM
               run: npm install
             - name: Test npm 
               run: npm test

@@ -1,0 +1,15 @@
+name: Introduction actions
+run-name: ${{ github.actor }}
+on: [push]
+
+jobs:
+    simple-action:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Simple JS Action
+              id: great
+              uses: actions/hello-world-javascript-action@main
+              with:
+                who-to-greet: Pierre
+            - name: Log Greeting Time
+              run: echo "${{ steps.great.outputs.time}}"

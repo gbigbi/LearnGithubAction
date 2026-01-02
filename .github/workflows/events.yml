@@ -1,7 +1,11 @@
 name: Repository Events
 run-name: ${{github.actor}}
-on: [push, pull_request, issues]
-
+on: 
+    push:
+    pull_request:
+        types: [opened, assigned,reopened,synchronize]
+    issues:
+        types: [opened]
 jobs:
     checkout-test:
         runs-on: ubuntu-latest
@@ -10,4 +14,3 @@ jobs:
                 echo $GITHUB_SHA
                 echo $GITHUB_REF
             - uses: actions/checkout@v6
-                

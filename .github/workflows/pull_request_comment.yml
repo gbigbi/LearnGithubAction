@@ -1,5 +1,5 @@
 name: Pull request comment
-run-name: ${{github.actor}}
+run-name: ${{github.actor}} for pull request 
 on: 
     pull_request_target:
         types: [opened]
